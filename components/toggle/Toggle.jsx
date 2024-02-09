@@ -11,7 +11,7 @@ const Toggle = () => {
       color="warning"
       thumbIcon={({ isSelected, className }) =>
         isSelected ? (
-          <SunIcon className={className}  />
+          <SunIcon className={className} />
         ) : (
           <MoonIcon className={className} />
         )

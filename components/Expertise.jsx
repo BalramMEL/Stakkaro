@@ -23,7 +23,7 @@ const Expertise = () => {
         ))}
         </div>
           
-        <h2 className="text-center">showcasing our proficiency across various facets of the digital platform </h2> 
+        <h2 className="text-center mt-2">showcasing our proficiency across various facets of the digital platform </h2> 
     </div>
   );
 }

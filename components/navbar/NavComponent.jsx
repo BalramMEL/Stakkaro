@@ -4,6 +4,7 @@ import {Tabs, Tab} from "@nextui-org/react";
 import React, { useState } from "react";
 import {  Navbar,   NavbarBrand, Link, Button, NavbarContent,   NavbarItem,   NavbarMenuToggle,  NavbarMenu,  NavbarMenuItem} from "@nextui-org/react";import {AcmeLogo} from "./AcmeLogo.jsx";
 import Toggle from "../toggle/Toggle.jsx";
+import { ThemeSwitcher } from "../ThemeSwitcher.jsx";
 
 const NavComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,14 +24,14 @@ const NavComponent = () => {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="mt-2">
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <AcmeLogo />
+          <AcmeLogo/>
           <p className="font-bold text-inherit">STACKRO</p>
         </NavbarBrand>
       </NavbarContent>
@@ -49,45 +50,9 @@ const NavComponent = () => {
             ))}  
           </NavbarContent>    
 
-
-            {/* <NavbarItem> */}
-          {/* <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Home
-          </Link> */}
-        {/* </NavbarItem> */}
-        {/* <NavbarItem >
-          <Link href="#" color="foreground" className="hover:text-blue-600 font-semibold">
-            About us
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Work
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Services
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Clients
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Team
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="hover:text-blue-600 font-semibold">
-            Contact Us
-          </Link>
-        </NavbarItem> */}
-     
+    
       <NavbarContent justify="end">
-        <Toggle />
+        <ThemeSwitcher />
       </NavbarContent>
           
 
