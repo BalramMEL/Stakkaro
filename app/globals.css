@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.rgbborder{
+   border: 1px solid gray;
+  /* border-image: linear-gradient(45deg, purple, orange) 1; */ 
+     
+}
